@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.content{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px dotted #D47474;
+    min-height: 50px;
+    width: 439px;
+}
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+.icon li{
+	display: inline-block;
+	list-style: none;
+	width: 100px;
+	text-align: center;
+	border-right: 1px solid gray;
+	background-color: #F3EEEE;
+}
+textarea{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.comment{
+	width: 439px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.comment:hover{
+	cursor: pointer;
+}
+.cancel,.post{
+	float: right;
+	border: 1px solid #CEA5A5;
+	width: 100px;
+	text-align: center;
+	margin-left: 10px;	
+}
+.likeit:hover{
+	background: #EC7451;;
+	cursor: pointer;
+}
+a:hover{
+	cursor: pointer;
+}
+.user{
+	width: 100px;
+}
+.allComments{
+	margin-top: 10px;
+}
+.allComments li{
+	list-style: none;
+	margin: 10px;
+}
+.postTime{
+	margin-left: 20px;
+}

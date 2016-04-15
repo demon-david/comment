@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="easycomment" ng-controller="easycomment">
+	<head>
+		<meta charset="utf-8" />
+		<title>简单的评论留言</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>简单的评论留言</h1>
+			<div class="content">这是发布的一条微博</div>
+			<ul class='icon'>
+				<li>
+					<a ng-click='Comment()'>评论</a>
+				</li><li>
+					<like content='userLike'></like>
+					<span>{{userLike.LikeAmount}}</span>
+				</li>
+			</ul>
+			<div class="comment" ng-show='willComment'>
+				<div>
+					用户名:<input type="text" class="user" ng-model='userName'/>
+				</div>
+				<textarea id="comment" cols="60" rows="3" ng-model='postcomment'></textarea>
+				<a ng-click='Cancel()' class='cancel'>取消</a>
+				<a ng-click='Post()' class="post">发表评论</a>
+			</div>
+			<div class="allComments">
+				<ul>
+					<li ng-repeat='comment in comments | orderBy:"-time"'>
+						<div class="history">
+							用戶{{comment.userName}}评论:{{comment.comment}}
+						</div>
+						<div class="postTime">
+							发表时间:{{comment.time}}
+						</div>
+					</li>
+				</ul>
+			</div>
+    		<br />
+		</div>
+		<script src="js/angular.js"></script>
+	</body>
+</html>
